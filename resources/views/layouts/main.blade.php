@@ -74,8 +74,7 @@
 
 
           @yield('articles')
-          @yield('articles')
-          @yield('articles')
+
 
         </div>
         <div class="mdl-layout__tab-panel" id="features">
