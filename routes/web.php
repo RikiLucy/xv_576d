@@ -11,6 +11,12 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('index');
+    //$tasks = Task::orderBy('created_at', 'asc')->get();
+    $post = DB::table('posts')->paginate(2);
+    //return view('index');
+    return view('index', [
+        'post' => $post
+    ]);
 });
