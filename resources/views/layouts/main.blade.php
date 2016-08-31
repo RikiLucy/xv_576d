@@ -52,54 +52,46 @@
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
+
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
           <h3>Name &amp; Title</h3>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-          <a href="#features" class="mdl-layout__tab">About</a>
+          <a href="/admin">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+              <i class="material-icons" role="presentation">add</i>
+              <span class="visuallyhidden">Add</span>
 
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-          </button>
+            </button></a>
         </div>
+
+          @yield('admin_tab')
       </header>
+
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
 
 
-          @yield('articles')
+          @yield('content')
 
 
         </div>
-        <div class="mdl-layout__tab-panel" id="features">
-          @yield('articles')
-        </div>
 
-        <footer class="mdl-mega-footer">
-          <div class="mdl-mega-footer--middle-section">
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">FOOTER</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Updates</a></li>
-              </ul>
-            </div>
+          @yield('edit_articles')
 
-          </div>
 
-        </footer>
+
       </main>
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">Title</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
+    <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
-    <script src="{{ URL::asset('js/material.min.js') }}"></script>
+    <!--<script src="{{ URL::asset('js/material.min.js') }}"></script>-->
   </body>
 </html>
