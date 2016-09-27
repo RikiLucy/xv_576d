@@ -7,7 +7,7 @@
 
   <form action="/admin" method="post">
     {{ csrf_field() }}
-
+//
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input name="title" class="mdl-textfield__input" type="text" id="sample3">
